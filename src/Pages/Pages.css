@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 10vh;
+  word-wrap: break-word;
 }
 .heroStyle {
   color: rgb(51, 138, 219);
@@ -31,41 +32,6 @@
 }
 
 /* category */
-
-.category {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5vh;
-}
-.category_title {
-  margin-top: 10vh;
-  text-align: center;
-}
-.category_items {
-  padding: 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background: rgb(202, 223, 244);
-  color: black;
-  border-radius: 5px;
-}
-.foodImage {
-  background-color: rgb(51, 138, 219);
-  padding: 3px;
-  border-radius: 50%;
-  color: white;
-}
-.foodType {
-  font-size: 20px;
-}
-.category_items:hover {
-  transform: translateY(-15px);
-  cursor: pointer;
-  transition: 0.5s;
-}
 
 /* Popular food */
 .popular_foods_category {
@@ -154,6 +120,199 @@
   align-items: center;
   justify-content: center;
   margin-left: 60vh;
+}
+
+/* Home screen sizes */
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .contentLeft {
+    width: 100%;
+  }
+  .contentRight {
+    width: 100%;
+  }
+  .heroImage img {
+    width: 37%;
+  }
+  .hero_content {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    margin-top: 10vh;
+    font-size: 20px;
+  }
+  .hero_content p {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .heroStyle {
+    display: flex;
+    color: rgb(51, 138, 219);
+  }
+  .service {
+    font-size: 20px;
+    color: rgb(51, 138, 219);
+  }
+  /* food category */
+  .food_categories {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* pop */
+  .popular_foods_category {
+    width: 90%;
+  }
+  /* why */
+  .whyGrabFood {
+    display: flex;
+    flex-direction: column;
+  }
+  .whyLeft {
+    width: 100%;
+  }
+  .whyLeft img {
+    width: 50%;
+    display: flex;
+    margin: auto;
+  }
+  .whyRight {
+    width: 100%;
+  }
+  .whyTitle,
+  .whyContent {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+  }
+  /* All Food */
+  .popular_foods {
+    width: 80%;
+  }
+  .All_Foods {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    width: 90%;
+    margin: auto;
+  }
+  /* Testimonial */
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonialLeft {
+    width: 50%;
+    word-wrap: break-word;
+  }
+  .testimonialRight {
+    width: 100%;
+  }
+  .testimonialRight img {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .contentLeft {
+    width: 100%;
+  }
+  .contentRight {
+    width: 100%;
+  }
+  .heroImage img {
+    width: 37%;
+  }
+  .hero_content {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    margin-top: 10vh;
+    font-size: 20px;
+  }
+  .hero_content p {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .heroStyle {
+    display: flex;
+    color: rgb(51, 138, 219);
+  }
+  .service {
+    font-size: 20px;
+    color: rgb(51, 138, 219);
+  }
+  /* food category */
+  .food_categories {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* pop */
+  .popular_foods_category {
+    width: 90%;
+  }
+  /* why */
+  .whyGrabFood {
+    display: flex;
+    flex-direction: column;
+  }
+  .whyLeft {
+    width: 100%;
+  }
+  .whyLeft img {
+    width: 50%;
+    display: flex;
+    margin: auto;
+  }
+  .whyRight {
+    width: 100%;
+  }
+  .whyTitle,
+  .whyContent {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+  }
+  /* All Food */
+  .popular_foods {
+    width: 80%;
+  }
+  .All_Foods {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    width: 90%;
+    margin: auto;
+  }
+  /* Testimonial */
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonialLeft {
+    width: 50%;
+    word-wrap: break-word;
+  }
+  .testimonialRight {
+    width: 100%;
+  }
+  .testimonialRight img {
+    width: 50%;
+    float: left;
+  }
 }
 
 /* Cart */

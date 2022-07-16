@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.all_food_filter_and_search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
+.all_food_search {
+  font-size: 20px;
+}
+.searchFoodInput {
+  border-radius: 15px;
+  margin-left: 15px;
+  padding: 5px;
+}
+.all_food_filter {
+  font-size: 20px;
+}
+.all_foods {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.dropdown {
+  margin-left: 15px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.no_result {
+  color: red;
+  text-align: center;
+}

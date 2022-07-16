@@ -42,7 +42,6 @@ const Cart = () => {
             <div className="cartLeft col-md-7 mt-4">
               <TableContainer component={Paper}>
                 <Table
-                  id="#supsystic-table-1"
                   size="small"
                   aria-label=" table"
                   options={{

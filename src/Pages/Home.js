@@ -105,7 +105,6 @@ const Home = () => {
           {/* category */}
           <section className="food_categories mt-5">
             <h2 className="text-center pt-5">What we serve</h2>
-            {/* <h2 className="category_title">Available Foods</h2> */}
             <Category />
           </section>
 

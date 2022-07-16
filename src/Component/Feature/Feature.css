@@ -6,3 +6,8 @@
 .feature_image {
   width: 50%;
 }
+@media only screen and (max-width: 600px) {
+  .features {
+    width: 50%;
+  }
+}

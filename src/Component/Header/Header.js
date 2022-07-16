@@ -14,7 +14,7 @@ export const Header = () => {
   const storeData = useSelector((state) => state.CartReducer)
 
   const nav = [
-    { display: 'home', path: '/home' },
+    { display: 'Home', path: '/home' },
     { display: 'Foods', path: '/foods' },
     { display: 'Cart', path: '/cart' },
     { display: 'Contact', path: '/contact' },
@@ -52,7 +52,6 @@ export const Header = () => {
               <Link to="/cart">
                 <ShoppingCartIcon fontSize="large" />
               </Link>
-
               <span className="cart_items">
                 {storeData.cart.length > 0 ? storeData.cart.length : 0}
               </span>

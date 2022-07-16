@@ -1,0 +1,12 @@
+.allFood_common {
+  margin-top: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+    url('../../assets/images/all_food_banner.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+.common_title {
+  color: white;
+  font-weight: 700;
+}

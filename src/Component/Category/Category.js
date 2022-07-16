@@ -4,6 +4,7 @@ import LunchDiningIcon from '@mui/icons-material/LunchDining'
 import RamenDiningIcon from '@mui/icons-material/RamenDining'
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu'
 import BrunchDiningIcon from '@mui/icons-material/BrunchDining'
+import './Category.css'
 const Category = () => {
   const categories = [
     { display: 'Punjabi', image: <BrunchDiningIcon fontSize="large" /> },

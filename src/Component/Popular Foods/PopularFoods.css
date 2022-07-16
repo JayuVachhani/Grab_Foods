@@ -32,3 +32,11 @@
   color: white;
   background: rgb(51, 138, 219);
 }
+@media only screen and (max-width: 600px) {
+  .popular_foods_items {
+    width: 40%;
+  }
+  .popular_foods_item_image img {
+    width: 70%;
+  }
+}

@@ -20,7 +20,7 @@ const PopularFoods = (props) => {
           <Link to={`/food/${id}`}>{title}</Link>
         </h5>
       </div>
-      <div className="d-flex align-items-center justify-content-between">
+      <div className="cartAction d-flex align-items-center justify-content-between">
         <div className="popular_foods_item_price">
           <CurrencyRupeeIcon /> {price}
         </div>

@@ -9,7 +9,6 @@ export const Layout = () => {
       <div>
         <Routers />
       </div>
-
       <Footer />
     </div>
   )
