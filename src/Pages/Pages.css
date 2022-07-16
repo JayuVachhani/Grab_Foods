@@ -1,0 +1,221 @@
+/* Home Page */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.contentLeft {
+  width: 50%;
+}
+.heroImage img {
+  right: 0;
+  width: 90%;
+}
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+.heroStyle {
+  color: rgb(51, 138, 219);
+}
+.allFoods a {
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid rgb(51, 138, 219);
+  padding: 9px;
+  border-radius: 5px;
+}
+.service {
+  color: rgb(51, 138, 219);
+}
+
+/* category */
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5vh;
+}
+.category_title {
+  margin-top: 10vh;
+  text-align: center;
+}
+.category_items {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(202, 223, 244);
+  color: black;
+  border-radius: 5px;
+}
+.foodImage {
+  background-color: rgb(51, 138, 219);
+  padding: 3px;
+  border-radius: 50%;
+  color: white;
+}
+.foodType {
+  font-size: 20px;
+}
+.category_items:hover {
+  transform: translateY(-15px);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+/* Popular food */
+.popular_foods_category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(202, 223, 244);
+  padding: 20px;
+}
+.popular_food_category_btn {
+  font-size: 20px;
+}
+.popular_food_category_btn img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.All_Foods {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.popular_food_category_btn {
+  background: transparent;
+  border: none;
+}
+.activeCategory {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+/* Why */
+.whyGrabFood {
+  display: flex;
+}
+.whyLeft img {
+  width: 100%;
+}
+.whyRight {
+  margin-top: 15vh;
+}
+.whyList {
+  margin-top: 10px;
+}
+.whyList_title {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 2px;
+}
+.whyTitle span,
+.whyList_title span,
+.testimonial_title {
+  color: rgb(51, 138, 219);
+}
+
+/* testimonial */
+.testimonial {
+  display: flex;
+}
+.testimonialLeft {
+  margin-top: 20vh;
+}
+.testimonialRight {
+  margin-top: 30px;
+}
+.networkImage img {
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+.carousel__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+/* No data Found */
+.NoDataFound {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 60vh;
+}
+
+/* Cart */
+.cartSection {
+  display: flex;
+}
+.cartLeft {
+  display: flex;
+  margin: auto;
+}
+
+.qty {
+  width: 30%;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+}
+.gst {
+  color: grey;
+  font-size: 12px;
+}
+.cartItems {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.cartItemImage {
+  width: 15vh;
+  height: 15vh;
+}
+.cartTable {
+  margin-top: 3%;
+}
+.OverviewCartItems {
+  padding: 5vh;
+  background: rgb(242, 246, 249);
+  border-radius: 10px;
+}
+.overview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 5vh;
+}
+.tableHead {
+  background: rgb(112, 114, 230);
+}
+.tableHead .tableHeading {
+  font-size: 15px;
+}
+.cartItemsTitle {
+  font-size: 50px;
+}
+.removeItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: red;
+  font-size: 30px;
+  cursor: pointer;
+}
