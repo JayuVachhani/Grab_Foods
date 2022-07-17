@@ -3,26 +3,48 @@ import { Common } from '../Component/All_Food_Common_Section/Common'
 import Title from '../Component/Document Title/Title'
 import PopularFoods from '../Component/Popular Foods/PopularFoods'
 import { products } from '../assets/fake-data/product'
+import ReactPaginate from 'react-paginate'
 import './pages_style/AllFoods.css'
 
 const AllFoods = () => {
+  const [category, setCategory] = useState('')
   const [searchFood, setSearchFood] = useState('')
   const [foodItems] = useState(products)
-  let result = []
-  if (searchFood === '') {
-    result = foodItems
-  } else {
-    result = products.filter((item) => {
+  const [pageNumber, setPageNumber] = useState(0)
+
+  let displayItems = []
+
+  if (searchFood === '' && category === '') {
+    displayItems = foodItems
+  } else if (searchFood !== '') {
+    displayItems = products.filter((item) => {
       if (item.title.toLowerCase().includes(searchFood.toLocaleLowerCase())) {
         return item
       }
     })
+  } else if (category === 'All') {
+    displayItems = foodItems
+  } else {
+    displayItems = products.filter((item) => {
+      return item.category === category
+    })
+  }
+
+  const showItemsPerPage = 12
+  const pageVisited = pageNumber * showItemsPerPage
+  const itemsToDisplay = displayItems.slice(
+    pageVisited,
+    pageVisited + showItemsPerPage,
+  )
+  const pageCount = Math.ceil(displayItems.length / showItemsPerPage)
+
+  const changePage = ({ selected }) => {
+    setPageNumber(selected)
   }
 
   return (
     <>
       <Title title=" All Foods" />
-
       <Common title="All Foods" />
       <div className="container">
         <div className="all_food_filter_and_search">
@@ -37,16 +59,13 @@ const AllFoods = () => {
           </div>
           <div className="all_food_filter">
             <label className="filter_label">Category Filters : </label>
-            <select className="dropdown">
-              <option
-                className="dropdown-item"
-                selected
-                defaultValue={'select category'}
-                disabled
-              >
-                select category
+            <select
+              className="dropdown"
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <option className="dropdown-item" value={''} selected>
+                All
               </option>
-              <option className="dropdown-item">All</option>
               <option className="dropdown-item">Gujarati</option>
               <option className="dropdown-item">Punjabi</option>
               <option className="dropdown-item">Chinese</option>
@@ -57,14 +76,25 @@ const AllFoods = () => {
           </div>
         </div>
         <div className="all_foods">
-          {result && result.length > 0 ? (
-            result.map((item) => {
+          {itemsToDisplay && itemsToDisplay.length > 0 ? (
+            itemsToDisplay.map((item) => {
               return <PopularFoods foodItems={item} />
             })
           ) : (
             <p className="no_result">Sorry!! No Item found</p>
           )}
         </div>
+        <ReactPaginate
+          nextLabel={'Next'}
+          previousLabel="Previous"
+          pageCount={pageCount}
+          onPageChange={changePage}
+          containerClassName="paginationBtns"
+          previousLinkClassName="previousBtn"
+          nextLinkClassName="nextBtn"
+          disabledClassName="paginationDisabled"
+          activeClassName="paginationActive"
+        />
       </div>
     </>
   )
